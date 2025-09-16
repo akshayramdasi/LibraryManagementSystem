@@ -1,15 +1,16 @@
-import Book.Book;
+import LibraryItem.Author;
+import LibraryItem.Book;
+import Member.Member;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
+        Author author = new Author("james", "fiction writer");
         System.out.println("Welcome to library");
-
-        Book book1 = new Book();
-        book1.enterBookDetails();
-        book1.getBookDetails();
+        Book book = new Book("new", author, "IND12345", 1986);
+        book.getBookDetails();
+        Member member = new Member(Member.MemberRoles.STUDENT, "akshay");
+        member.getMemberDetails();
     }
 }
